@@ -1,0 +1,669 @@
+/* Genel Ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+h1 {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+}
+
+/* Header */
+.header {
+  background-color: #008000;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .auth .btn {
+  background-color: #fff;
+  color: #008000;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Arama Bölümü */
+.search-section {
+  background: url("images/modern.jpeg") no-repeat center center/cover;
+  color: #fff;
+  height: 400px;
+  text-align: center;
+  padding: 40px 20px;
+  height: 100vh;
+}
+
+.arama_ekran{
+	background-color: #f4f4f4;
+    background-image: url('images/city.jpg'); /* Arka plan resmi yolu */
+    background-size: cover; /* Resim alanı kaplar ve orantılı bir şekilde ölçeklenir */
+    background-position: center; /* Resim ortalanır */
+    background-repeat: repeat; 
+	
+}
+/* Arama Alanı */
+.arama-container {
+  position: relative;
+  display: inline-block;
+  padding: 25px;
+  text-align: center;
+  background: rgba(255, 239, 204, 0.4); /* Şeffaf beyaz arka plan */
+  border-radius: 25px;
+  backdrop-filter: blur(3px); /* Arka planı bulanıklaştırır */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.arama-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.arama-alani {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.arama-alani select,
+.arama-alani input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.arama-alani button {
+  padding: 10px 20px;
+  background: #008000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.arama-alani button:hover {
+  background: #005500;
+}
+
+/* Kategoriler */
+.categories {
+  background-color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.categories h3 {
+  margin-bottom: 20px;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-category {
+  background-color: #f4f4f4;
+  color: #008000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-category:hover {
+  background-color: #008000;
+  color: #fff;
+}
+
+/* Modal Yapısı */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Koyu arka plan */
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content input,
+.modal-content button {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.modal-content button:hover {
+  background-color: #218838;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Auth Butonları */
+.auth {
+  display: flex;
+  gap: 10px;
+}
+
+/* Arama Sonuçları */
+.results-section {
+  background: url("images/city.jpg");
+  height: 100vh;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* İlan Listesi */
+.ilan-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ilan-karti {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.ilan-karti img.ilan-resmi {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.ilan-karti h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.ilan-karti p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.ilan-karti .btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #4fa876;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.ilan-karti .btn:hover {
+  background-color: #2f784f;
+}
+
+/* Navbar Butonları */
+.navbar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #0056b3;
+}
+
+/* Açılır Menü (Sidebar) */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+/* ilan ekle Genel Ayarlar */
+body {
+  background-color: #D8BFD8;
+}
+
+h4 {
+  text-align: center;
+  color: #008000;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(8, 56, 21, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#user_tel:disabled {
+    background-color: #f5f5f5;
+    color: #888;
+}
+.btn {
+  background-color: #008000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn:hover {
+  background-color: #006400;
+}
+
+.detay-container {
+  width: 70%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detay-karti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.detay-resmi {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.detay-karti p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.detay-karti strong {
+  color: #333;
+}
+
+.favoriler-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.favori-kart {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favori-kart img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.favori-kart h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.favori-kart p {
+  font-size: 14px;
+  color: #555;
+}
+
+.favori-kart .fiyat {
+  font-weight: bold;
+  color: #4CAF50;
+}
+.listings {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+	flex-direction: row-reverse; 
+}
+
+.listing, .applications {
+    width: 48%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    color: #2d2d2d;
+	text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ilanekle{
+	background: url("images/modern.jpeg");
+	height: 100vh; /* Ekranın tamamını kaplar */
+	text-align: center;
+	padding: 40px 20px;
+}
+/* Profil Bölümü */
+.profile-section {
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    padding: 20px;
+	background-color: rgba(8, 56, 21, 0.6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h4 {
+    margin-bottom: 15px;
+	background-color: #f5faf6;
+}
+
+.profile-info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.profile-info .btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 8px 12px;
+}
+
+.profile-info .btn:hover {
+    background-color: #218838;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.section {
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+	background-color: rgba(8, 56, 21, 0.6);
+
+}
+
+
+.icerik{
+	overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    text-align: center;
+	max-width: 1000px;
+	margin: 50px auto;
+  padding: 10px;
+  background-color: rgba(8, 56, 21, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	
+}
+
+.section h5 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+}
+
+.card-content {
+    flex: 1;
+    padding: 10px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-buttons button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card-buttons button:hover {
+    background: #45a049;
+}
+
+.card-buttons .delete {
+    background: #f44336;
+}
+
+.card-buttons .delete:hover {
+    background: #e53935;
+}
+.buton{
+	background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buton button:hover {
+    background: #45a049;
+}
